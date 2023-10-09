@@ -27,7 +27,7 @@
     "test:cov": "vitest run --coverage",
     "prepare": "husky install",
     "prepack": "json -f package.json -I -e \"delete this.devDependencies; delete this.dependencies\"",
-    "publish-app": "npm version minor && npm run build:lib && npm publish"
+    "publish-app": "npm version minor && git push && git push --tags && npm run build:lib && npm publish"
   },
   "peerDependencies": {
     "react": "18.2.0",
